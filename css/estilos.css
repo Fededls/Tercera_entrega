@@ -1,0 +1,1026 @@
+@charset "UTF-8";
+/*Animación*/
+.ofertaAnimada1 {
+  animation-name: tipo1;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+}
+
+.ofertaAnimada2 {
+  animation-name: tipo2;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+}
+
+.ofertaAnimada3 {
+  animation-name: tipo3;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+}
+
+.ofertaAnimada4 {
+  animation-name: tipo4;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+}
+
+.bannerAnimado1 {
+  animation-name: banner1;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+
+.bannerAnimado2 {
+  animation-name: banner2;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+
+/*Keyframes para iniciar animación*/
+@keyframes tipo1 {
+  /*Estructura compleja*/
+  0% {
+    transform: translate(-300px, -300px);
+    border-radius: 100%;
+  }
+  20% {
+    border-radius: 80%;
+  }
+  40% {
+    border-radius: 60%;
+  }
+  60% {
+    border-radius: 40%;
+  }
+  80% {
+    border-radius: 20%;
+  }
+  100% {
+    border-radius: 5%;
+  }
+}
+@keyframes tipo2 {
+  /*Estructura compleja*/
+  0% {
+    transform: translate(300px, -300px);
+    border-radius: 100%;
+  }
+  20% {
+    border-radius: 80%;
+  }
+  40% {
+    border-radius: 60%;
+  }
+  60% {
+    border-radius: 40%;
+  }
+  80% {
+    border-radius: 20%;
+  }
+  100% {
+    border-radius: 5%;
+  }
+}
+@keyframes tipo3 {
+  /*Estructura compleja*/
+  0% {
+    transform: translate(-300px, 300px);
+    border-radius: 100%;
+  }
+  20% {
+    border-radius: 80%;
+  }
+  40% {
+    border-radius: 60%;
+  }
+  60% {
+    border-radius: 40%;
+  }
+  80% {
+    border-radius: 20%;
+  }
+  100% {
+    border-radius: 5%;
+  }
+}
+@keyframes tipo4 {
+  /*Estructura compleja*/
+  0% {
+    transform: translate(300px, 300px);
+    border-radius: 100%;
+  }
+  20% {
+    border-radius: 80%;
+  }
+  40% {
+    border-radius: 60%;
+  }
+  60% {
+    border-radius: 40%;
+  }
+  80% {
+    border-radius: 20%;
+  }
+  100% {
+    border-radius: 5%;
+  }
+}
+/*Transiciones*/
+.formaProducto {
+  transition: all, 0.5s;
+}
+.formaProducto:hover {
+  border-radius: 50%;
+  border: solid 2px darkblue;
+}
+
+/*----RESPONSIVE----*/
+/*DESKTOP*/
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    margin: 5px;
+    font-family: "Arvo", sans-serif;
+    background-color: goldenrod;
+    background-image: linear-gradient(to bottom, goldenrod, khaki, goldenrod);
+  }
+  body section span {
+    justify-self: center;
+    align-self: bottom;
+    color: #ce0606;
+    font-weight: bold;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 250px 320px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  #gridAreasOfertas {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 250px 320px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  #gridAreasProductos {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 500px 500px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  #gridAreasEmpresa {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 400px 400px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  /*titulo degradado animado*/
+  .tituloDegradadoAnimado {
+    font-size: 1.7rem;
+    font-weight: bold;
+    animation-name: radiacion;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background: linear-gradient(-45deg, darkred, red, blue, darkblue);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /*Animación*/
+  @keyframes radiacion {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  /*Menu principal*/
+  header {
+    text-align: center;
+  }
+  header nav {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  /*Menu lateral*/
+  #menuSecundario {
+    grid-area: menu2;
+  }
+
+  aside ul li {
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkslateblue;
+  }
+  aside ul li:hover {
+    font-size: 150%;
+  }
+
+  aside a {
+    color: darkslateblue;
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+  }
+  aside ul li {
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkslateblue;
+    list-style: none;
+  }
+  aside ul li:hover {
+    font-size: 150%;
+  }
+
+  /*banner lateral Info*/
+  #info {
+    grid-area: info;
+    padding: 10px;
+    font-size: 15px;
+    font-style: italic;
+    color: darkslateblue;
+  }
+
+  /*Grillas centrales*/
+  .gridCentral {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 6fr 30fr 17fr 30fr 17fr;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+  }
+
+  .gridCentralSections {
+    display: grid;
+    grid-template-columns: repeat(3, 33fr);
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralProductos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3% 22% 3% 22% 3% 22% 3% 22%;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralArticulos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralSimple {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralEmpresa {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 33% 33% 33%;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  /*Formato de contenido central*/
+  .subtitleProd {
+    text-align: center;
+    color: #ce0606;
+    font-weight: bold;
+  }
+
+  .subtitleProdCentral {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #ce0606;
+    font-weight: bold;
+  }
+
+  .articuloType1 {
+    justify-self: center;
+    width: 40%;
+    height: auto;
+  }
+
+  .articuloType2 {
+    margin-left: 10%;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+  }
+
+  .avatar {
+    width: 100px;
+    height: auto;
+    text-align: center;
+  }
+
+  section a img {
+    margin-left: 12%;
+    width: 70%;
+    height: auto;
+    border-left: solid 2px lightskyblue;
+    border-top: solid 2px lightskyblue;
+    border-right: solid 5px darkblue;
+    border-bottom: solid 5px darkblue;
+  }
+
+  fieldset {
+    width: 400px;
+  }
+  fieldset textarea {
+    width: 400px;
+    height: 100px;
+  }
+
+  .gradienteCentral {
+    background-image: radial-gradient(white, khaki);
+  }
+
+  /*Animación*/
+  @keyframes banner1 {
+    /*Estructura compleja*/
+    0% {
+      transform: translate(800px);
+      width: 150%;
+    }
+  }
+  @keyframes banner2 {
+    /*Estructura compleja*/
+    0% {
+      transform: translate(-1500px);
+      width: 150%;
+    }
+  }
+  /*Pie de pagina*/
+  footer {
+    text-align: center;
+    font-size: 16px;
+  }
+  footer div {
+    background-color: black;
+  }
+}
+/*----RESPONSIVE----*/
+/*TABLET*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    height: 100vh;
+    margin: 5px;
+    font-family: "Arvo", sans-serif;
+    background-image: linear-gradient(to bottom, goldenrod, khaki, goldenrod);
+  }
+  body section span {
+    justify-self: center;
+    align-self: bottom;
+    color: #ce0606;
+    font-weight: bold;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 280px 280px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  #gridAreasOfertas {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 280px 280px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  #gridAreasProductos {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 500px 500px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  #gridAreasEmpresa {
+    display: grid;
+    grid-template-areas: "menu2 productos banner1" "info productos banner2";
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 450px 450px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
+
+  /*titulo degradado animado*/
+  .tituloDegradadoAnimado {
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation-name: radiacion;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation: fluido 5s ease-in-out infinite; */
+    background: linear-gradient(-45deg, darkred, red, blue, darkblue);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /*Animación*/
+  @keyframes radiacion {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  /*Menu principal*/
+  /*Menu principal*/
+  header {
+    text-align: center;
+  }
+  header nav {
+    padding: 3px;
+    font-size: 14px;
+  }
+
+  /*Menu lateral*/
+  #menuSecundario {
+    grid-area: menu2;
+  }
+
+  aside a {
+    color: darkslateblue;
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+  }
+  aside ul li {
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    list-style: none;
+  }
+  aside ul li:hover {
+    font-size: 120%;
+  }
+
+  /*banner lateral Info*/
+  #info {
+    grid-area: info;
+    padding: 5px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    color: darkslateblue;
+  }
+
+  /*Grillas centrales*/
+  .gridCentral {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 6fr 30fr 17fr 30fr 17fr;
+    border: 2px solid #ce0606;
+    background-image: radial-gradient(khaki, white);
+  }
+
+  .gridCentralProductos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3% 22% 3% 22% 3% 22% 3% 22%;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralSections {
+    display: grid;
+    grid-template-columns: repeat(3, 33fr);
+    justify-self: center;
+    border: 2px solid #ce0606;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralArticulos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-self: center;
+    border: 2px solid #ce0606;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  .gridCentralSimple {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(khaki, white);
+    width: 100%;
+  }
+
+  /*Formato de contenido central*/
+  .subtitleProd {
+    text-align: center;
+    color: #ce0606;
+    font-weight: bold;
+  }
+
+  .subtitleProdCentral {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    color: darkslateblue;
+    font-weight: bold;
+  }
+
+  .articuloType1 {
+    justify-self: center;
+    width: 40%;
+    height: auto;
+  }
+
+  .articuloType2 {
+    margin-left: 10%;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    font-style: italic;
+    color: black;
+  }
+
+  .avatar {
+    width: 100px;
+    height: auto;
+    text-align: center;
+  }
+
+  section a img {
+    margin-left: 10%;
+    width: 80%;
+    height: auto;
+    border-left: solid 2px lightskyblue;
+    border-top: solid 2px lightskyblue;
+    border-right: solid 5px darkblue;
+    border-bottom: solid 5px darkblue;
+  }
+
+  fieldset {
+    width: 400px;
+  }
+  fieldset textarea {
+    width: 400px;
+    height: 80px;
+  }
+
+  /*Animación*/
+  @keyframes banner1 {
+    /*Estructura compleja*/
+    0% {
+      transform: translate(800px);
+      width: 150%;
+    }
+  }
+  @keyframes banner2 {
+    /*Estructura compleja*/
+    0% {
+      transform: translate(-1500px);
+      width: 150%;
+    }
+  }
+  /*Pie de pagina*/
+  footer {
+    text-align: center;
+    font-size: 14px;
+  }
+  footer div {
+    background-color: black;
+  }
+}
+/*----RESPONSIVE----*/
+/*SMARTPHONE*/
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+    margin: 0px;
+    font-family: "Arvo", sans-serif;
+    background-color: khaki;
+    background-image: linear-gradient(to bottom, mediumpurple, khaki, mediumpurple);
+  }
+  body section span {
+    justify-self: center;
+    align-self: bottom;
+    color: #150581;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "menu2 productos" "banner1 productos" "banner2 productos" "info productos";
+    grid-template-columns: 30% auto;
+    grid-template-rows: 32fr 18fr 18fr 32fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  #gridAreasOfertas {
+    display: grid;
+    grid-template-areas: "menu2 productos" "banner1 productos" "banner2 productos" "info productos";
+    grid-template-columns: 30% auto;
+    grid-template-rows: 32fr 18fr 18fr 32fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  #gridAreasProductos {
+    display: grid;
+    grid-template-areas: "menu2 productos" "banner1 productos" "banner2 productos" "info productos";
+    grid-template-columns: 30% auto;
+    grid-template-rows: 32fr 18fr 18fr 32fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  #gridAreasEmpresa {
+    display: grid;
+    grid-template-areas: "menu2 productos" "banner1 productos" "banner2 productos" "info productos";
+    grid-template-columns: 30% auto;
+    grid-template-rows: 350px 250px 250px 350px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .tituloDegradadoAnimado {
+    font-size: 2rem;
+    font-weight: bold;
+    animation-name: radiacion;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background: linear-gradient(-45deg, darkred, red, blue, darkblue);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /*Animación*/
+  @keyframes radiacion {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  /*Menu principal*/
+  /*Menu principal*/
+  header {
+    text-align: center;
+  }
+  header nav {
+    padding: 0px;
+    font-size: 12px;
+  }
+
+  /*Menu lateral*/
+  #menuSecundario {
+    grid-area: menu2;
+  }
+
+  aside a {
+    color: #ce0606;
+    text-decoration: none;
+    width: 80%;
+  }
+  aside ul li {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+  }
+  aside ul li:hover {
+    font-size: 105%;
+  }
+
+  /*banner lateral e Info*/
+  #info {
+    grid-area: info;
+    padding: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ce0606;
+  }
+
+  /*Grillas centrales*/
+  .gridCentral {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #ce0606;
+    background-image: radial-gradient(white, khaki);
+    width: 100%;
+  }
+
+  .gridCentralProductos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3% 22% 3% 22% 3% 22% 3% 22%;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(white, khaki);
+    width: 100%;
+  }
+
+  .gridCentralSections {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px;
+    justify-self: center;
+    border: 2px solid #ce0606;
+    background-image: radial-gradient(white, khaki);
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .gridCentralArticulos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    justify-self: center;
+    border: 4px solid #150581;
+    background-image: radial-gradient(white, khaki);
+    width: 100%;
+  }
+
+  .gridCentralSimple {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-self: center;
+    border: 4px solid white;
+    background-image: radial-gradient(white, khaki);
+    width: 100%;
+  }
+
+  /*Formato de contenido central*/
+  .subtitleProd {
+    text-align: center;
+    color: #150581;
+    font-weight: bold;
+  }
+
+  .subtitleProdCentral {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    color: #ce0606;
+    font-weight: bold;
+  }
+
+  .articuloType1 {
+    justify-self: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .articuloType2 {
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    font-style: italic;
+    color: #150581;
+  }
+
+  .avatar {
+    width: 200px;
+    height: auto;
+    text-align: center;
+  }
+
+  section a img {
+    margin-left: 10%;
+    width: 70%;
+    height: auto;
+    border-left: solid 2px lightskyblue;
+    border-top: solid 2px lightskyblue;
+    border-right: solid 5px darkblue;
+    border-bottom: solid 5px darkblue;
+  }
+
+  fieldset {
+    width: 260px;
+  }
+  fieldset textarea {
+    width: 200px;
+    height: 50px;
+  }
+
+  /*Animación*/
+  @keyframes banner1 {
+    /*Estructura compleja*/
+    0% {
+      transform: translate(300px);
+      width: 150%;
+    }
+  }
+  @keyframes banner2 {
+    /*Estructura compleja*/
+    0% {
+      transform: translate(-700px);
+      width: 150%;
+    }
+  }
+  /*Pie de pagina*/
+  footer {
+    text-align: center;
+    font-size: 12px;
+  }
+  footer div {
+    background-color: black;
+  }
+}
+/*Comentarios CSS*/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/*Agregar fuente descargada de Google Fonts*/
+@font-face {
+  font-family: "Arvo";
+  src: url("../fonts/Arvo/Arvo-Regular.ttf");
+}
+.border {
+  border: 1px solid white;
+}
+
+/*Nombrar las areas*/
+#central {
+  grid-area: productos;
+  padding: 2px;
+}
+
+#publicidad1 {
+  grid-area: banner1;
+  padding: 10px;
+}
+
+#publicidad2 {
+  grid-area: banner2;
+  padding: 10px;
+}
+
+.bannerPublicidad {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.boton1 {
+  padding: 3px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  background-color: lightskyblue;
+  border-radius: 6px;
+  border: 2px solid darkblue;
+}
+
+.centrar {
+  text-align: center;
+}
+
+/*Menu Flex*/
+.centralFlex, .flexMenu {
+  display: flex;
+  flex-flow: nowrap;
+}
+
+.flexMenu {
+  flex-direction: column;
+}
+
+/*Etiquetas simples y padres e hijos*/
+article {
+  background-color: white;
+  border-radius: 4px;
+  margin: 5px;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 10px;
+}
+
+section h3 {
+  color: red;
+}
+
+section h4 {
+  color: red;
+}
+
+fieldset legend {
+  background-color: white;
+  color: darkblue;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+}
+fieldset label {
+  font-size: 10px;
+  color: darkred;
+}
+fieldset input {
+  font-size: 10px;
+  height: 20px;
+}
+fieldset select {
+  font-size: 10px;
+  height: 20px;
+}
+fieldset span {
+  font-size: 10px;
+}
+
+.setImage {
+  margin: 12% 12%;
+  width: 40%;
+  height: auto;
+}
+
+/*# sourceMappingURL=estilos.css.map */

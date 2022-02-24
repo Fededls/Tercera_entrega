@@ -1,0 +1,135 @@
+//importación de partials
+@import "./partials/variables.scss";
+@import "./partials/colores.scss";
+@import "./partials/mixin.scss";
+@import "./partials/animacionGral.scss";
+@import "./partials/desktopType.scss";
+@import "./partials/tabletType.scss";
+@import "./partials/phoneType.scss";
+
+/*Comentarios CSS*/
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/*Agregar fuente descargada de Google Fonts*/
+@font-face {
+    font-family:$fuente;
+    src: url($urlFuente);
+}
+.border {
+    border: 1px solid $bordeBase;
+ }
+ /*Nombrar las areas*/
+//----------------------MAPAS-------------------------
+$idAreas:(
+    //clave - valor   
+    #central: productos,
+    #publicidad1: banner1,
+    #publicidad2: banner2
+);
+//Ejemplo map-get
+$paddingAreas:( 
+    #central: 2px,
+    #publicidad1: 10px,
+    #publicidad2: 10px
+);
+@each $nombres, $valor in $idAreas{
+    #{$nombres}{
+        grid-area: $valor;
+        padding: map-get($paddingAreas, $nombres);
+    }
+}
+//-----------------------------------------------------
+
+.bannerPublicidad{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.negrita{
+    font-weight: bold;
+}
+.boton1{
+    padding: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    color: $colorBase;
+    background-color: $gradiente5;
+    border-radius: 6px;
+    border: 2px solid $gradiente4;
+}
+.centrar{
+    text-align: center;
+}
+
+//Ejemplo de EXTEND----------------------------------------------------------
+/*Menu Flex*/
+.centralFlex {
+    display: flex;
+    flex-flow:nowrap;
+}
+.flexMenu {
+    @extend .centralFlex;
+    flex-direction: column;
+}
+//-----------------------------------------------------------------------------
+
+/*Etiquetas simples y padres e hijos*/
+article {
+    background-color: $colorBase;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+}
+section h3{
+    color:$gradiente2;
+}
+section h4{
+    color:$gradiente2;
+}
+fieldset{
+    legend{
+        background-color: $colorBase;
+        color:$gradiente4;
+        font-weight: bold;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 12px;
+    }
+    label{
+    font-size: 10px;
+    color: $gradiente1;
+    }
+    input{
+        font-size: 10px;
+        height: 20px;
+    }
+    select{
+        font-size: 10px;
+        height: 20px;
+    }
+    span{
+        font-size: 10px;
+    }
+}
+.setImage{
+    margin: 12% 12%;
+    width: 40%;
+    height: auto;
+}
+
+
+
+
+
+

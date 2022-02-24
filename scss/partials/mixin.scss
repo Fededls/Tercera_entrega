@@ -1,0 +1,16 @@
+//Ejemplos de MIXIN--------------------------------------------------------------
+@mixin bordesArticulos($izqArriba,$derAbajo){
+    border-left: $izqArriba;
+    border-top: $izqArriba;
+    border-right: $derAbajo;
+    border-bottom: $derAbajo;
+}
+@mixin gridType($display,$areas,$columns,$rows,$columnGap,$rowGap){
+    display:$display;
+    grid-template-areas:$areas;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-column-gap: $columnGap;
+    grid-row-gap: $rowGap;
+}
+//-------------------------------------------------------------------------------

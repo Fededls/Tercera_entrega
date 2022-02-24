@@ -1,0 +1,220 @@
+/*----RESPONSIVE----*/
+/*DESKTOP*/
+@media (min-width: $desktopMin){
+    
+    body {
+        height: 100vh;
+        margin: 5px;
+        font-family:"Arvo", sans-serif;
+        background-color:$bodyDesktop1; 
+        background-image: linear-gradient(to bottom, $bodyDesktop1, $bodyDesktop2, $bodyDesktop1);  
+        section span{
+            justify-self:center;
+            align-self:bottom;
+            color:$textDesktop2;
+            font-weight: bold;
+        }
+    }
+    /* GRIDS POR AREAS */
+    #gridAreas{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 15% auto 15%, 250px 320px, 4px, 4px);
+    }
+    #gridAreasOfertas{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 15% auto 15%, 250px 320px, 4px, 4px);
+    }
+    #gridAreasProductos{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 15% auto 15%, 500px 500px, 4px, 4px);
+    }
+    #gridAreasEmpresa{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 15% auto 15%, 400px 400px, 4px, 4px);
+    }
+    /*titulo degradado animado*/
+    .tituloDegradadoAnimado {
+    font-size: 1.7rem;
+    font-weight: bold;
+    animation-name: radiacion;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background: linear-gradient(-45deg, $gradiente1, $gradiente2, $gradiente3, $gradiente4);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    /*Animación*/
+    @keyframes radiacion {
+        0% { background-position: 0 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0 50% }
+    }
+    /*Menu principal*/
+    header{
+        text-align: center;
+        nav{
+            padding: 5px;
+            font-size: 16px;
+        }
+    }
+    /*Menu lateral*/
+    #menuSecundario{
+        grid-area: menu2;   
+    }
+    aside ul li{
+        padding: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        color:$textDesktop1;
+        &:hover{
+            font-size: 150%;
+        }
+    }
+    aside{
+        a{
+            color:$textDesktop1; 
+            text-align: center;
+            text-decoration:none;
+            width: 80%;
+        }
+        ul li{
+            padding: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            color:$textDesktop1;
+            list-style: none;
+            &:hover{
+                font-size: 150%;
+            }
+        }
+    }
+    /*banner lateral Info*/
+    #info{
+        grid-area: info;  
+        padding: 10px;
+        font-size: 15px;
+        font-style: italic;
+        color:$textDesktop1;
+    }
+    /*Grillas centrales*/
+    .gridCentral{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 6fr 30fr 17fr 30fr 17fr;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyDesktop2, $colorBase);
+    }
+    .gridCentralSections{
+        display: grid;
+        grid-template-columns:repeat(3, 33fr);
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyDesktop2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralProductos{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:3% 22% 3% 22% 3% 22% 3% 22% ;
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyDesktop2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralArticulos{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyDesktop2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralSimple{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyDesktop2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralEmpresa{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 33% 33% 33%;
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyDesktop2, $colorBase);
+        width: 100%;
+    }
+    /*Formato de contenido central*/
+    .subtitleProd{
+        text-align: center;
+        color:$textDesktop2;
+        font-weight: bold;  
+    }
+    .subtitleProdCentral{
+        font-size: 20px; 
+        font-style: italic;
+        text-align: center;
+        color:$textDesktop2;
+        font-weight: bold;   
+    }
+    .articuloType1{
+        justify-self: center;
+        width: 40%;
+        height: auto;
+    }
+    .articuloType2{
+        margin-left: 10%;
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        font-style: italic;
+        color:$fuenteType;
+    }
+    .avatar{
+        width: 100px;
+        height: auto;
+        text-align: center;
+    }
+    section a img{
+        margin-left: 12%;
+        width: 70%;
+        height: auto;
+        @include bordesArticulos(solid 2px $gradiente5,solid 5px $gradiente4);
+    }
+    fieldset{
+        width: 400px; 
+        textarea{
+            width: 400px;
+            height: 100px;
+        }
+    }
+    .gradienteCentral{
+        background-image: radial-gradient($colorBase, $bodyDesktop2);
+    }
+    /*Animación*/
+    @keyframes banner1{
+        /*Estructura compleja*/
+        0%/*inicio*/{
+            transform: translate(800px);
+            width: 150%;
+        }
+    }
+    @keyframes banner2{
+        /*Estructura compleja*/
+        0%/*inicio*/{
+            transform: translate(-1500px);
+            width: 150%;
+        }
+    }
+    /*Pie de pagina*/
+    footer{
+        text-align: center;
+        font-size: 16px;
+        div{
+            background-color: $fuenteType;
+        }
+    }
+}

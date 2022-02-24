@@ -1,0 +1,200 @@
+ /*----RESPONSIVE----*/
+ /*TABLET*/
+ @media (min-width: $tabletMin) and (max-width: $tabletMax){
+ 
+    body {
+        height: 100vh;
+        margin: 5px;
+        font-family:"Arvo", sans-serif;
+        background-image: linear-gradient(to bottom, $bodyTablet1, $bodyTablet2, $bodyTablet1);    
+        section span{
+            justify-self:center;
+            align-self:bottom;
+            color:$textTablet2;
+            font-weight: bold;
+        }
+    }
+    /* GRIDS POR AREAS */
+    #gridAreas{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 20% auto 20%, 280px 280px, 4px, 4px);
+    }
+    #gridAreasOfertas{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 20% auto 20%, 280px 280px, 4px, 4px);
+    }
+    #gridAreasProductos{
+        @include gridType(grid,"menu2 productos banner1" "info productos banner2", 20% auto 20%, 500px 500px, 4px, 4px);
+    }
+    #gridAreasEmpresa{
+        @include gridType(grid, "menu2 productos banner1" "info productos banner2", 20% auto 20%, 450px 450px, 4px, 4px);
+    }
+    /*titulo degradado animado*/
+    .tituloDegradadoAnimado {
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation-name: radiacion;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation: fluido 5s ease-in-out infinite; */
+    background: linear-gradient(-45deg, $gradiente1, $gradiente2, $gradiente3, $gradiente4);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    /*Animación*/
+    @keyframes radiacion {
+        0% { background-position: 0 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0 50% }
+    }
+    /*Menu principal*/
+    /*Menu principal*/
+    header{
+        text-align: center;
+        nav{
+            padding: 3px;
+            font-size: 14px;
+        }
+    }
+    /*Menu lateral*/
+    #menuSecundario{
+        grid-area: menu2;   
+    }
+    aside{ 
+        a{
+            color: $textTablet1;
+            text-align: center;
+            text-decoration:none;
+            width: 80%;
+        }
+        ul li{
+            padding: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            list-style: none;
+            &:hover{
+                font-size: 120%;
+            }
+        }
+    }
+    /*banner lateral Info*/
+    #info{
+        grid-area: info;  
+        padding: 5px;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: bold;
+        color:$textTablet1;
+    }
+    /*Grillas centrales*/
+    .gridCentral{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 6fr 30fr 17fr 30fr 17fr;
+        border: 2px solid $textTablet2;
+        background-image: radial-gradient($bodyTablet2, $colorBase);
+    }
+    .gridCentralProductos{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:3% 22% 3% 22% 3% 22% 3% 22% ;
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyTablet2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralSections{
+        display: grid;
+        grid-template-columns:repeat(3, 33fr);
+        justify-self: center;
+        border: 2px solid $textTablet2;
+        background-image: radial-gradient($bodyTablet2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralArticulos{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-self: center;
+        border: 2px solid $textTablet2;
+        background-image: radial-gradient($bodyTablet2, $colorBase);
+        width: 100%;
+    }
+    .gridCentralSimple{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-self: center;
+        border: 4px solid $bordeBase;
+        background-image: radial-gradient($bodyTablet2, $colorBase);
+        width: 100%;
+    }
+    /*Formato de contenido central*/
+    .subtitleProd{
+        text-align: center;
+        color:$textTablet2;
+        font-weight: bold;  
+    }
+    .subtitleProdCentral{
+        font-size: 14px; 
+        font-style: italic;
+        text-align: center;
+        color:$textTablet1;
+        font-weight: bold;   
+    }
+    .articuloType1{
+        justify-self: center;
+        width: 40%;
+        height: auto;
+    }
+    .articuloType2{
+        margin-left: 10%;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        font-style: italic;
+        color:$fuenteType;
+    }
+    .avatar{
+        width: 100px;
+        height: auto;
+        text-align: center;
+    }
+    section a img{
+        margin-left: 10%;
+        width: 80%;
+        height: auto;
+        @include bordesArticulos(solid 2px $gradiente5,solid 5px $gradiente4);
+    }
+    fieldset{
+        width: 400px; 
+        textarea{
+            width: 400px;
+            height: 80px;
+        }
+    }
+    /*Animación*/
+    @keyframes banner1{
+        /*Estructura compleja*/
+        0%/*inicio*/{
+            transform: translate(800px);
+            width: 150%;
+        }
+    }
+    @keyframes banner2{
+        /*Estructura compleja*/
+        0%/*inicio*/{
+            transform: translate(-1500px);
+            width: 150%;
+        }
+    }
+    /*Pie de pagina*/
+    footer{
+        text-align: center;
+        font-size: 14px;
+        div{
+            background-color: $fuenteType;
+        }
+    }
+}
